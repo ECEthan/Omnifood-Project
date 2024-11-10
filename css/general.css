@@ -23,15 +23,19 @@ LETTER SPACING
 ------02) COLORS
 
 Primary: #e67e22
-Tints: #fdf2e9 #fae5d3
+Tints: #fdf2e9 #fae5d3 #eb984e
 Shades: #cf711f
 Accents
 Greys
+#888
+#767676 (Lightest gray allowed on white
 #555
 #333
 #6f6f6f (lightest gray allowed)
 
 ------05) SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 ------06) BORDER-RADIUS
 
@@ -99,6 +103,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-v {
   align-items: center;
 }
@@ -140,9 +148,10 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
-  background-color: #e67e22;
+  /* background-color: #e67e22; */
   text-decoration: none;
   display: inline-block;
   font-size: 2rem;
@@ -150,6 +159,10 @@ body {
   border-radius: 9px;
   font-weight: 600;
   transition: all 0.3s;
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn--full:link,
@@ -177,6 +190,18 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
 .link:link,
 .link:visited {
   display: inline-block;
@@ -191,6 +216,14 @@ body {
 .link:active {
   color: #cf711f;
   border-bottom: 1px solid transparent;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /*HELPER/SETTINGS CLASSES*/
